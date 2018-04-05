@@ -7,9 +7,9 @@
 **[Author]** [Xiaoyong Shen](http://xiaoyongshen.me/), [Aaron Hertzmann](http://www.dgp.utoronto.ca/~hertzman/), [Jiaya Jia](http://www.cse.cuhk.edu.hk/leojia/), [Sylvain Paris](http://people.csail.mit.edu/sparis/), [Brian Price](https://research.adobe.com/person/brian-price/), [Eli Shechtman](http://www.wisdom.weizmann.ac.il/~elishe/), Ian Sachs <Br>
 **[Pages]**  http://xiaoyongshen.me/webpage_portrait/index.html <Br>
 **[Description]** <Br>
-	1) 粗读, 较早的用CNN做全自动portrait segmentation的paper, backbone为FCN;
-	2) 首先检测facial feature points，将portrait从图像中crop出来，并得到当前图像与canonical pose的homography transform (T). T用于对齐当前图像与canonical pose, 计算normalized的位置特征, 和得到形状先验.
-	3) position特征和shape特征与crop出来的人像一起作为FCN的输入, 由FCN得到最后的分割结果
+1) 粗读, 较早的用CNN做全自动portrait segmentation的paper, backbone为FCN;
+2) 首先检测facial feature points，将portrait从图像中crop出来，并得到当前图像与canonical pose的homography transform (T). T用于对齐当前图像与canonical pose, 计算normalized的位置特征, 和得到形状先验.
+3) position特征和shape特征与crop出来的人像一起作为FCN的输入, 由FCN得到最后的分割结果
 
 
 ### BSN★
