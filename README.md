@@ -4,7 +4,7 @@
 - [Human Segmentation](#human-seg)
 - [Human Parsing](#human-parse)
 
-## Human Segmentation
+# Human Segmentation
 ### PortraitFCN★ 
 **[Paper]** Automatic Portrait Segmentation for Image Stylization <Br>
 **[Year]** Eurographics 2016 <Br>
@@ -27,7 +27,7 @@
 3) global boundary-sensitive kernel: 在训练集上通过统计平均的方法得到position sensitive prior。计算loss时用此Kernel对不同位置的pixel加权
 4) boundary-sensitive attribute classifier: 没看懂
 
-## Human Parsing
+# Human Parsing
 ### Co-CNN★ 
 **[Paper]** Human Parsing with Contextualized Convolutional Neural Network <Br>
 **[Year]** ICCV 2015 Oral <Br>
