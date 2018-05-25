@@ -1,8 +1,8 @@
 # Human Related Paper Record
 # Under Construction!
 # Table of Contents
-- [Human Segmentation](#human-seg)
-- [Human Parsing](#human-parse)
+  - [Human Segmentation](#human-seg)
+  - [Human Parsing](#human-parse)
 
 ## Human Segmentation
 ### PortraitFCN★ 
