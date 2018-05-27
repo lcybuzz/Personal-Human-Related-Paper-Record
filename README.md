@@ -3,6 +3,7 @@
 # Table of Contents
 - [Human Segmentation](#human-seg)
 - [Human Parsing](#human-parse)
+  - [DL Parsing](#dl-parsing)
 
 # Human Segmentation
 ### PortraitFCN★ 
@@ -28,12 +29,23 @@
 4) boundary-sensitive attribute classifier: 没看懂
 
 # Human Parsing
+
+### *Deep Learning for Semantic Part Segmentation with High-Level Guidance* ★
+**[Paper]** Deep Learning for Semantic Part Segmentation with High-Level Guidance <Br>
+**[Year]** ICLR 2016 <Br>
+**[Author]** [Stavros Tsogkas](http://tsogkas.github.io/),[Iasonas Kokkinos](http://www0.cs.ucl.ac.uk/staff/I.Kokkinos/), [George Papandreou](http://ttic.uchicago.edu/~gpapan/), [Andrea Vedaldi](http://www.robots.ox.ac.uk/~vedaldi/) <Br>
+**[Pages]** <Br>
+**[Description]** <Br>
+1) 不太懂, 涉及到RBM <Br>
+  
 ### Co-CNN★ 
 **[Paper]** Human Parsing with Contextualized Convolutional Neural Network <Br>
 **[Year]** ICCV 2015 Oral <Br>
 **[Author]** [Xiaodan Liang](http://www.cs.cmu.edu/~xiaodan1/),  Chunyan Xu, [Xiaohui Shen](http://users.eecs.northwestern.edu/~xsh835/), [Jianchao Yang](http://www.ifp.illinois.edu/~jyang29/), [Liu Si](http://liusi-group.com/), Jinhui Tang, Liang Lin, [Shuicheng Yan](http://www.lv-nus.org/) <Br>
 **[Pages]**  http://hcp.sysu.edu.cn/?p=666 <Br>
 **[Description]** <Br>
-1) 采用类似U-Net的encoder-decoder结构, decoder阶段结合原图和encoder阶段的信息. 
-2）在最小的feature map后接一多类分类分支. 分类一支的loss参与全局梯度更新, 另外每个类别的概率与decoder中的每层feature map concat起来, 作为global image-level context
-3) 最后使用基于超像素的within-super-pixel smoothing和cross-super-pixel neighborhood voting
+1) 采用类似U-Net的encoder-decoder结构, decoder阶段结合原图和encoder阶段的信息. <Br>
+2）在最小的feature map后接一多类分类分支. 分类一支的loss参与全局梯度更新, 另外每个类别的概率与decoder中的每层feature map concat起来, 作为global image-level context <Br>
+3) 最后使用基于超像素的within-super-pixel smoothing和cross-super-pixel neighborhood voting <Br>
+  
+
