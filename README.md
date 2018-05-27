@@ -3,7 +3,6 @@
 # Table of Contents
 - [Human Segmentation](#human-seg)
 - [Human Parsing](#human-parse)
-  - [DL Parsing](#dl-parsing)
 
 # Human Segmentation
 ### PortraitFCN★ 
