@@ -3,6 +3,7 @@
 # Table of Contents
 - [Human Segmentation](#human-segmentation)
 - [Human Parsing](#human-parsing)
+- [Datasets](#datasets)
 
 # Human Segmentation
 ### PortraitFCN★ 
@@ -46,4 +47,8 @@
   2) 在最小的feature map后接一多类分类分支. 分类一支的loss参与全局梯度更新, 另外每个类别的概率与decoder中的每层feature map concat起来, 作为global image-level context <Br>
   3) 最后使用基于超像素的within-super-pixel smoothing和cross-super-pixel neighborhood voting <Br>
   
+# Datasets
+[LIP](http://sysu-hcp.net/lip/)
+[MHP](https://lv-mhp.github.io/)
+
 
