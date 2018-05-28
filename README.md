@@ -46,7 +46,22 @@
   1) 采用类似U-Net的encoder-decoder结构, decoder阶段结合原图和encoder阶段的信息. <Br>
   2) 在最小的feature map后接一多类分类分支. 分类一支的loss参与全局梯度更新, 另外每个类别的概率与decoder中的每层feature map concat起来, 作为global image-level context <Br>
   3) 最后使用基于超像素的within-super-pixel smoothing和cross-super-pixel neighborhood voting <Br>
-  
+
+### auto-zoom 
+**[Paper]** Zoom better to see clearer: Human and object parsing with hierarchical auto-zoom net<Br>
+**[Year]** ECCV 2016 <Br>
+**[Author]** [Fangting Xia](https://sukixia.github.io), [Peng Wang](http://jerryking234.wixsite.com/pengwang), [Liang-Chieh Chen](http://www.stat.ucla.edu/~xianjie.chen/), [Alan L. Yuille](http://www.cs.jhu.edu/~ayuille/)<Br>
+**[Pages]** https://sukixia.github.io/paper.html<Br>
+**[Description]** <Br>
+
+### PFCN 
+**[Paper]**JOINT MULTI-PERSON POSE ESTIMATION AND SEMANTIC PART SEGMENTATION <Br>
+**[Year]** CVPR 2017 <Br>
+**[Author]** [Fangting Xia](https://sukixia.github.io), [Peng Wang](http://jerryking234.wixsite.com/pengwang), [Xianjie Chen](http://www.stat.ucla.edu/~xianjie.chen/), [Alan L. Yuille](http://www.cs.jhu.edu/~ayuille/)<Br>
+**[Pages]** <Br>
+**[Description]** <Br>
+
+
 # Datasets
 [LIP](http://sysu-hcp.net/lip/) <Br>
 [MHP](https://lv-mhp.github.io/) <Br>
