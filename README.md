@@ -4,9 +4,19 @@
 - [Human Segmentation](#human-segmentation)
 - [Human Parsing](#human-parsing)
 - [Datasets](#datasets)
-
+# Rank
+- Human Segmentation <Br>
+  - ★★★ <Br>
+  - ★★ <Br>
+  - ★ <Br>
+  **PortraitFCN**, **BSN**  <Br>
+- Human Parsing <Br>
+  - ★★★ <Br>
+  - ★★ <Br>
+  - ★ <Br>
+  **High-Level Guidance**, **Co-CNN**, **PFCN**  <Br>
 # Human Segmentation
-### PortraitFCN★ 
+### PortraitFCN ★ 
 **[Paper]** Automatic Portrait Segmentation for Image Stylization <Br>
 **[Year]** Eurographics 2016 <Br>
 **[Author]** [Xiaoyong Shen](http://xiaoyongshen.me/), [Aaron Hertzmann](http://www.dgp.utoronto.ca/~hertzman/), [Jiaya Jia](http://www.cse.cuhk.edu.hk/leojia/), [Sylvain Paris](http://people.csail.mit.edu/sparis/), [Brian Price](https://research.adobe.com/person/brian-price/), [Eli Shechtman](http://www.wisdom.weizmann.ac.il/~elishe/), Ian Sachs <Br>
@@ -16,7 +26,7 @@
 2) 首先检测facial feature points，将portrait从图像中crop出来，并得到当前图像与canonical pose的homography transform (T). T用于对齐当前图像与canonical pose, 计算normalized的位置特征, 和得到形状先验.<Br>
 3) position特征和shape特征与crop出来的人像一起作为FCN的输入, 由FCN得到最后的分割结果 <Br>
 
-### BSN★
+### BSN ★
 **[Paper]** Boundary-sensitive Network for Portrait Segmentation <Br>
 **[Year]** arXiv 1712 <Br>
 **[Author]** Xianzhi Du, Larry Davis <Br>
@@ -37,7 +47,7 @@
 **[Description]** <Br>
 1) 不太懂, 涉及到RBM <Br>
   
-### Co-CNN★ 
+### Co-CNN ★ 
 **[Paper]** Human Parsing with Contextualized Convolutional Neural Network <Br>
 **[Year]** ICCV 2015 Oral <Br>
 **[Author]** [Xiaodan Liang](http://www.cs.cmu.edu/~xiaodan1/),  Chunyan Xu, [Xiaohui Shen](http://users.eecs.northwestern.edu/~xsh835/), [Jianchao Yang](http://www.ifp.illinois.edu/~jyang29/), [Liu Si](http://liusi-group.com/), Jinhui Tang, Liang Lin, [Shuicheng Yan](http://www.lv-nus.org/) <Br>
@@ -54,13 +64,17 @@
 **[Pages]** https://sukixia.github.io/paper.html<Br>
 **[Description]** <Br>
 
-### PFCN 
-**[Paper]**JOINT MULTI-PERSON POSE ESTIMATION AND SEMANTIC PART SEGMENTATION <Br>
+### PFCN ★ 
+**[Paper]** Joint Multi-Person Pose Estimation and Semantic Part Segmentation <Br>
 **[Year]** CVPR 2017 <Br>
 **[Author]** [Fangting Xia](https://sukixia.github.io), [Peng Wang](http://jerryking234.wixsite.com/pengwang), [Xianjie Chen](http://www.stat.ucla.edu/~xianjie.chen/), [Alan L. Yuille](http://www.cs.jhu.edu/~ayuille/)<Br>
 **[Pages]** <Br>
 **[Description]** <Br>
-
+1) 姿态预测和人体解析结合的一篇paper. 分为pose estimation和part segmentation两阶段. <Br>
+2) pose estimation阶段, 先使用Pose FCN得到joint score map和joint neighbor prediction map. joint score map是h*w*14, joint neighbor prediction map是h*w*14*13*2(对每个关节得到其与其它关节点的位置偏置). 另外用Part FCN得到semantic part score map. 最后, 设计一Fully-Connected
+CRF, unary term从joint score map得到, pairwise term由neighbor score map和semantic part score map设计特征得到. <Br>
+3) part segmentation阶段, 从final pose estimation得到joint label map和skeleton label map, 作为两个feature map叠加到第一阶段的semantic part score map上, 用一小型FCN得到分割结果. <Br>
+4) 关于如何利用不同类别在空间和语义上的内在关系, 本篇paper很值得借鉴. <Br>
 
 # Datasets
 [LIP](http://sysu-hcp.net/lip/) <Br>
