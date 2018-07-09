@@ -9,7 +9,7 @@
   - ★★★ <Br>
   - ★★ <Br>
   - ★ <Br>
-  **PortraitFCN**, **BSN**  <Br>
+  **PortraitFCN**, **BSN**, **Pose2Seg**  <Br>
 - Human Parsing <Br>
   - ★★★ <Br>
   - ★★ <Br>
@@ -36,6 +36,18 @@
 2) individual boundary-sensitive kernel: 先用Canny从真值图中得到边缘，再通过dilation得到边缘的soft label。Kernel为1x3的vector，里面分别是从soft label计算得到的前景，背景和边缘的可能性。计算loss时用此Kernel为每个像素的不同channel加权 <Br>
 3) global boundary-sensitive kernel: 在训练集上通过统计平均的方法得到position sensitive prior。计算loss时用此Kernel对不同位置的pixel加权 <Br>
 4) boundary-sensitive attribute classifier: 没看懂 <Br>
+
+### Pose2Seg ★★
+**[Paper]** Pose2Seg: Human Instance Segmentation Without Detection <Br>
+**[Year]** arXiv 1803 <Br>
+**[Author]** [Ruilong Li](http://www.liruilong.cn/), Xin Dong, Zixi Cai, Dingcheng Yang, Haozhi Huang, Song-Hai Zhang, [Paul L. Rosin](http://users.cs.cf.ac.uk/Paul.Rosin/), Shi-Min Hu <Br>
+**[Pages]** <Br>
+**[Description]** <Br>
+  1) 结合pose做human instance segmentation, 与mask r-cnn相比对overlap的目标效果更好. 包括人体keypoint检测, Affine Align, 对每个align后的人分割三部分. <Br>
+  2) keypoint检测部分使用hourglass结构, 得到每个人的keypoint; <Br>
+  3) Affine Align是将ROI通过仿射变换, 将其与预先定义的模板对齐, 变换矩阵是通过最小化误差得到的. Affine Align后, 人体可以变得更加接近正常的竖直状态, 这可以提高对复杂姿态的性能; <Br>
+  4) 将keypoint的feature与ROI concat起来, 完成分割. 用keypoint指导分割. <Br>
+  5) 不足：I.分割性能很大程度上依赖于keypoint, 但对于多人keypoint检测只用一hourglass网络, 效果有限; II. Affine Align只包括平移, 缩放, 旋转, 实际效果是只能把倾斜角度很大的人体一定程度上修正到正常角度. 而且加入了最优化投影矩阵这一步骤, 使流程变得更复杂 <Br>
 
 # Human Parsing
 
