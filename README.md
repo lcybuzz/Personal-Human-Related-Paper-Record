@@ -8,8 +8,9 @@
 - Human Segmentation <Br>
   - ★★★ <Br>
   - ★★ <Br>
+  **Pose2Seg** <Br>
   - ★ <Br>
-  **PortraitFCN**, **BSN**, **Pose2Seg**  <Br>
+  **PortraitFCN**, **BSN** <Br>
 - Human Parsing <Br>
   - ★★★ <Br>
   - ★★ <Br>
