@@ -8,14 +8,15 @@
 - Human Segmentation <Br>
   - ★★★ <Br>
   - ★★ <Br>
-  **Pose2Seg** <Br>
+  **[Pose2Seg]** <Br>
   - ★ <Br>
-  **PortraitFCN**, **BSN** <Br>
+  **[PortraitFCN]**, **[BSN]** <Br>
 - Human Parsing <Br>
   - ★★★ <Br>
   - ★★ <Br>
   - ★ <Br>
-  **High-Level Guidance**, **Co-CNN**, **PFCN**  <Br>
+  **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**  <Br>
+  
 # Human Segmentation
 ### PortraitFCN ★ 
 **[Paper]** Automatic Portrait Segmentation for Image Stylization <Br>
