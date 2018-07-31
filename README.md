@@ -15,7 +15,7 @@
   - ★★★ <Br>
   - ★★ <Br>
   - ★ <Br>
-  **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**  <Br>
+  **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**  <Br>
   
 # Human Segmentation
 ### PortraitFCN ★ 
@@ -89,6 +89,15 @@
 CRF, unary term从joint score map得到, pairwise term由neighbor score map和semantic part score map设计特征得到. <Br>
 3) part segmentation阶段, 从final pose estimation得到joint label map和skeleton label map, 作为两个feature map叠加到第一阶段的semantic part score map上, 用一小型FCN得到分割结果. <Br>
 4) 关于如何利用不同类别在空间和语义上的内在关系, 本篇paper很值得借鉴. <Br>
+
+### WSHP ★ 
+**[Paper]** Weakly and Semi Supervised Human Body Part Parsing via Pose-Guided Knowledge Transfer <Br>
+**[Year]** CVPR 2018 spotlight <Br>
+**[Author]** [Hao-Shu FANG](https://fang-haoshu.github.io/), [Guansong Lu](http://apex.sjtu.edu.cn/members/gslu@apexlab.org), [Xiaolin Fang](https://fang-xiaolin.github.io/), [Jianwen Xie](http://www.stat.ucla.edu/~jxie/), [Yu-Wing Tai](https://scholar.google.com/citations?user=nFhLmFkAAAAJ&hl=en）, [Cewu Lu](http://mvig.sjtu.edu.cn/)<Br>
+**[Pages]** https://github.com/MVIG-SJTU/WSHP <Br>
+**[Description]** <Br>
+1) 粗读, 利用人体keypoint生成human parsing mask的一篇论文. 本文显示利用keypoint可以得到等好的人体解析结果. <Br>
+2) 分为寻找相似pose, 生成part-level pior和image-guided refinement三步. 第一步, 利用keypoint找到与输入图像最相似的若干图像组成cluster; 第二步, 根据输入图像与cluster的关键的计算出仿射变换矩阵, 将cluster的part segmentation mask变换到与输入图像更相似的空间, 对所有cluster的变换结果取平均, 即得到piror; 第三步, 将输入图像叠加到第二步得到的part segmentation的heatmap上, 用一类似UNet的网络进行refine. <Br>
 
 # Datasets
 [LIP](http://sysu-hcp.net/lip/) <Br>
