@@ -14,6 +14,7 @@
 - Human Parsing <Br>
   - ★★★ <Br>
   - ★★ <Br>
+  **[PGN]** <Br>
   - ★ <Br>
   **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**  <Br>
   
@@ -64,7 +65,7 @@
 ### Co-CNN ★ 
 **[Paper]** Human Parsing with Contextualized Convolutional Neural Network <Br>
 **[Year]** ICCV 2015 Oral <Br>
-**[Author]** [Xiaodan Liang](http://www.cs.cmu.edu/~xiaodan1/),  Chunyan Xu, [Xiaohui Shen](http://users.eecs.northwestern.edu/~xsh835/), [Jianchao Yang](http://www.ifp.illinois.edu/~jyang29/), [Liu Si](http://liusi-group.com/), Jinhui Tang, Liang Lin, [Shuicheng Yan](http://www.lv-nus.org/) <Br>
+**[Author]** [Xiaodan Liang](http://www.cs.cmu.edu/~xiaodan1/),  Chunyan Xu, [Xiaohui Shen](http://users.eecs.northwestern.edu/~xsh835/), [Jianchao Yang](http://www.ifp.illinois.edu/~jyang29/), [Liu Si](http://liusi-group.com/), Jinhui Tang, [Liang Lin](http://www.linliang.net/), [Shuicheng Yan](http://www.lv-nus.org/) <Br>
 **[Pages]**  http://hcp.sysu.edu.cn/?p=666 <Br>
 **[Description]** <Br>
   1) 采用类似U-Net的encoder-decoder结构, decoder阶段结合原图和encoder阶段的信息. <Br>
@@ -99,8 +100,21 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 1) 粗读, 利用人体keypoint生成human parsing mask的一篇论文. 本文显示利用keypoint可以得到等好的人体解析结果. <Br>
 2) 分为寻找相似pose, 生成part-level pior和image-guided refinement三步. 第一步, 利用keypoint找到与输入图像最相似的若干图像组成cluster; 第二步, 根据输入图像与cluster的关键的计算出仿射变换矩阵, 将cluster的part segmentation mask变换到与输入图像更相似的空间, 对所有cluster的变换结果取平均, 即得到piror; 第三步, 将输入图像叠加到第二步得到的part segmentation的heatmap上, 用一类似UNet的网络进行refine. <Br>
 
+### **PGN ★★**
+**[Paper]**  MaskLab: Instance Segmentation by Refining Object Detection with Semantic and Direction Features  <Br>
+**[Year]** CVPR 2018 <Br>
+**[Authors]** [Ke Gong](https://github.com/Engineering-Course), [Xiaodan Liang](http://www.cs.cmu.edu/afs/cs/user/xiaodan1/www/), [Yicheng Li](https://github.com/yicheng-li), [Yimin Chen](https://scholar.google.com/citations?user=rpLGwAQAAAAJ&hl=en), [Ming Yang](https://github.com/ufoym), [Liang Lin](http://www.linliang.net/)<Br>
+**[Pages]** https://github.com/Engineering-Course/CIHP_PGN<Br>
+**[Description]**<Br>
+1) 分割+边缘检测做instance segmentation的一篇paper, 主要用于多人解析中. <Br>
+2) 分为backbone网络, segmentation branch, edge detection branch和refinement branch四部分. backbone为resnet101, 把最后三个block concat起来作为多尺度feature送入接下来的branch中; segmentation branch和edge detection branch结构钢相似, 都使用了pyramid pooling, 此外边缘检测部分还使用了deep supervision, 即将最后三个block的feature拉出来做ASPP后都去预测边缘; 最后, 分割和边缘检测的结构concat起来送入refinement branch得到最后的分割和边缘检测结果. <Br>
+3) instance partition部分, 首先水平和垂直地扫描, 根据edge确定属于同一instance的segments, 这些线段组成一连通图; 用BFS找到属于同一instance的pixel; 最后进行grouping, 去掉边缘检测的一些假边缘产生的小区域. <Br>
+4) 提出了CHIP多人解析数据集, 这个数据集标注的比较精细. <Br>
+
+
 # Datasets
 [LIP](http://sysu-hcp.net/lip/) <Br>
+[CHIP](http://www.sysu-hcp.net/lip/) <Br>
 [MHP](https://lv-mhp.github.io/) <Br>
 
 
