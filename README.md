@@ -102,7 +102,7 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 
 ### **PGN ★★**
 **[Paper]**  MaskLab: Instance Segmentation by Refining Object Detection with Semantic and Direction Features  <Br>
-**[Year]** CVPR 2018 <Br>
+**[Year]** ECCV 2018 Oral <Br>
 **[Authors]** [Ke Gong](https://github.com/Engineering-Course), [Xiaodan Liang](http://www.cs.cmu.edu/afs/cs/user/xiaodan1/www/), [Yicheng Li](https://github.com/yicheng-li), [Yimin Chen](https://scholar.google.com/citations?user=rpLGwAQAAAAJ&hl=en), [Ming Yang](https://github.com/ufoym), [Liang Lin](http://www.linliang.net/)<Br>
 **[Pages]** https://github.com/Engineering-Course/CIHP_PGN<Br>
 **[Description]**<Br>
