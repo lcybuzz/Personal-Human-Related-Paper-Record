@@ -113,8 +113,9 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 
 
 # Datasets
-[LIP](http://sysu-hcp.net/lip/) <Br>
-[CHIP](http://www.sysu-hcp.net/lip/) <Br>
-[MHP](https://lv-mhp.github.io/) <Br>
+[LIP](http://sysu-hcp.net/lip/): single-person parsing<Br>
+[CHIP](http://www.sysu-hcp.net/lip/): multiple-person instance segmentation & parsing<Br>
+[MHP](https://lv-mhp.github.io/): multiple-person instance segmentation & parsing <Br>
+[PIC](http://picdataset.com/challenge/index/): relation-seg, muptiple-person segmentation <Br>
 
 
