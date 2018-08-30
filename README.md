@@ -16,7 +16,7 @@
   - ★★ <Br>
   **[PGN]** <Br>
   - ★ <Br>
-  **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**  <Br>
+  **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**  <Br>
   
 # Human Segmentation
 ### PortraitFCN ★ 
@@ -99,6 +99,16 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 **[Description]** <Br>
 1) 粗读, 利用人体keypoint生成human parsing mask的一篇论文. 本文显示利用keypoint可以得到等好的人体解析结果. <Br>
 2) 分为寻找相似pose, 生成part-level pior和image-guided refinement三步. 第一步, 利用keypoint找到与输入图像最相似的若干图像组成cluster; 第二步, 根据输入图像与cluster的关键的计算出仿射变换矩阵, 将cluster的part segmentation mask变换到与输入图像更相似的空间, 对所有cluster的变换结果取平均, 即得到piror; 第三步, 将输入图像叠加到第二步得到的part segmentation的heatmap上, 用一类似UNet的网络进行refine. <Br>
+
+### ***Cross-domain Adversarial★***
+**[Paper]**  Cross-domain Human Parsing via Adversarial Feature and Label Adaptation  <Br>
+**[Year]** AAAI 2018 <Br>
+**[Authors]** [Liu Si](http://liusi-group.com/), Yao Sun, [Defa Zhu](https://github.com/mathfinder), Guanghui Ren, Yu Chen, [Jiashi Feng](https://sites.google.com/site/jshfeng/), Jizhong Han<Br>
+**[Pages]** https://github.com/mathfinder/Cross-domain-Human-Parsing-via-Adversarial-Feature-and-Label-Adaptation<Br>
+**[Description]**<Br>
+1) 提出了一个在标准数据集上训练, 在任意场景测试的cross domain人体解析算法. <Br>
+2) 通过feature compensation network和feature adversarial network使在训练时source domain图像的特征接近target domain; 通过structure adversarial network使target domain最后输出的label具有接近一般人体的结构; inference时无需cross-domain model. <Br>
+3) 问题: 1. 从实验结果看, feature adaptation和label adaptation的有效性并不能得到很好的证明; 2. label adaptation似乎与cross-domain之间没什么必然的联系, 况且真实图像中人的姿态并不都是单一直立姿态的. <Br>
 
 ### **PGN ★★**
 **[Paper]**  MaskLab: Instance Segmentation by Refining Object Detection with Semantic and Direction Features  <Br>
