@@ -150,3 +150,4 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 # Sources-Lists<Br>
 https://blog.csdn.net/qq_36165459/article/details/78320535?locationNum=10&fps=1 <Br>
 https://zhuanlan.zhihu.com/p/37933909 <Br>
+http://www.aiuai.cn/aifarm63.html <Br>
