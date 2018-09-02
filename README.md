@@ -3,7 +3,9 @@
 # Table of Contents
 - [Human Segmentation](#human-segmentation)
 - [Human Parsing](#human-parsing)
+- [Human Pose Estimation](#human-pose-estimation)
 - [Datasets](#datasets)
+- [Sources-Lists](#sources-lists)
 # Rank
 - Human Segmentation <Br>
   - ★★★ <Br>
@@ -17,7 +19,11 @@
   **[PGN]** <Br>
   - ★ <Br>
   **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**  <Br>
-  
+ - Human Pose Estimation <Br>
+  - ★★★ <Br>
+  - ★★ <Br>
+  - ★ <Br>
+ 
 # Human Segmentation
 ### PortraitFCN ★ 
 **[Paper]** Automatic Portrait Segmentation for Image Stylization <Br>
@@ -122,10 +128,25 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 4) 提出了CHIP多人解析数据集, 这个数据集标注的比较精细. <Br>
 
 
+# Human Pose Estimation
+
+
 # Datasets
+## Human parsing
 [LIP](http://sysu-hcp.net/lip/): single-person parsing<Br>
 [CHIP](http://www.sysu-hcp.net/lip/): multiple-person instance segmentation & parsing<Br>
 [MHP](https://lv-mhp.github.io/): multiple-person instance segmentation & parsing <Br>
 [PIC](http://picdataset.com/challenge/index/): relation-seg, muptiple-person segmentation <Br>
+  
+## Human pose estimation
+[LSP](http://sam.johnson.io/research/lsp.html)
+[FLIC](http://bensapp.github.io/flic-dataset.html)
+[MPII](http://human-pose.mpi-inf.mpg.de/)
+[MSCOCO](http://cocodataset.org/)
+[AI Challenger](https://challenger.ai/dataset/keypoint)
+[PoseTrack](https://posetrack.net/)
 
 
+# Sources-Lists<Br>
+https://blog.csdn.net/qq_36165459/article/details/78320535?locationNum=10&fps=1 <Br>
+https://zhuanlan.zhihu.com/p/37933909 <Br>
