@@ -18,7 +18,7 @@
   - ★★ <Br>
   **[PGN]** <Br>
   - ★ <Br>
-  **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**  <Br>
+  **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**  <Br>
  - Human Pose Estimation <Br>
   - ★★★ <Br>
   - ★★ <Br>
@@ -127,6 +127,15 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 3) instance partition部分, 首先水平和垂直地扫描, 根据edge确定属于同一instance的segments, 这些线段组成一连通图; 用BFS找到属于同一instance的pixel; 最后进行grouping, 去掉边缘检测的一些假边缘产生的小区域. <Br>
 4) 提出了CHIP多人解析数据集, 这个数据集标注的比较精细. <Br>
 
+### **MMAN ★**
+**[Paper]**  Macro-Micro Adversarial Network for Human Parsing  <Br>
+**[Year]** ECCV 2018 <Br>
+**[Authors]** [Yawei Luo](https://scholar.google.com/citations?user=pnVwaGsAAAAJ&hl=en), [Zhedong Zheng](http://zdzheng.xyz/), [Liang Zheng](http://www.liangzheng.com.cn/), Tao Guan, Junqing Yu, [Yi Yang](https://www.uts.edu.au/staff/yi.yang)<Br>
+**[Pages]** https://github.com/RoyalVane/MMAN <Br>
+**[Description]**<Br>
+ 1) 提出用Micro和Macro GAN分别解决low-level局部不一致问题和high-level语义不一致问题 <Br>
+ 2) 解析网络用的是encoder-decoder结构, 在低分辨率特征图上拉出来一支计算Macro CE loss和GAN loss, 在高分辨率特征图上计算Micro CE loss和GAN loss. GAN部分分别使用了小的输入和分辨率和小的感受野, 因此很容易收敛.从paper展示的效果上看, 有一定效果 <Br>
+ 3) 疑问: 文中提到的low-level inconsistency error指像孔洞这样的错误, 这种问题为什么可以靠相邻像素解决？个人感觉如果感受野足够大，这种孔洞应该可以被解决.
 
 # Human Pose Estimation
 
