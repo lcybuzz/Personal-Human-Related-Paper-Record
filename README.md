@@ -18,7 +18,7 @@
   - ★★ <Br>
   **[PGN]** <Br>
   - ★ <Br>
-  **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**  <Br>
+  **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**, **[auto-zoom]**  <Br>
  - Human Pose Estimation <Br>
   - ★★★ <Br>
   - ★★ <Br>
@@ -78,12 +78,14 @@
   2) 在最小的feature map后接一多类分类分支. 分类一支的loss参与全局梯度更新, 另外每个类别的概率与decoder中的每层feature map concat起来, 作为global image-level context <Br>
   3) 最后使用基于超像素的within-super-pixel smoothing和cross-super-pixel neighborhood voting <Br>
 
-### auto-zoom 
+### auto-zoom ★ 
 **[Paper]** Zoom better to see clearer: Human and object parsing with hierarchical auto-zoom net<Br>
 **[Year]** ECCV 2016 <Br>
 **[Author]** [Fangting Xia](https://sukixia.github.io), [Peng Wang](http://jerryking234.wixsite.com/pengwang), [Liang-Chieh Chen](http://www.stat.ucla.edu/~xianjie.chen/), [Alan L. Yuille](http://www.cs.jhu.edu/~ayuille/)<Br>
 **[Pages]** https://sukixia.github.io/paper.html<Br>
 **[Description]** <Br>
+1) 粗读, 提出了一个image, object, part三阶段的Hierarchical Auto-Zoom Net(HAZN), 自适应地缩放尺度以处理不同尺度的part, 最后结果三个阶段的结果融合而成, 可以看成是一种多尺度信息的融合. <Br>
+2) 训练和测试不是end-to-end的, 具体流程没有研究. <Br>
 
 ### PFCN ★ 
 **[Paper]** Joint Multi-Person Pose Estimation and Semantic Part Segmentation <Br>
@@ -96,6 +98,14 @@
 CRF, unary term从joint score map得到, pairwise term由neighbor score map和semantic part score map设计特征得到. <Br>
 3) part segmentation阶段, 从final pose estimation得到joint label map和skeleton label map, 作为两个feature map叠加到第一阶段的semantic part score map上, 用一小型FCN得到分割结果. <Br>
 4) 关于如何利用不同类别在空间和语义上的内在关系, 本篇paper很值得借鉴. <Br>
+
+
+### SSL 
+**[Paper]** Look into Person: Self-supervised Structure-sensitive Learning and A New Benchmark for Human Parsing <Br>
+**[Year]** CVPR 2017 <Br>
+**[Author]** [Ke Gong](https://github.com/Engineering-Course), [Xiaodan Liang](http://www.cs.cmu.edu/afs/cs/user/xiaodan1/www/), [Xiaohui Shen](http://users.eecs.northwestern.edu/~xsh835/), [Jianchao Yang](http://www.ifp.illinois.edu/~jyang29/), Jinhui Tang, [Liang Lin](http://www.linliang.net/)<Br>
+**[Pages]** https://github.com/Engineering-Course/LIP_SSL <Br>
+**[Description]** <Br>
 
 ### WSHP ★ 
 **[Paper]** Weakly and Semi Supervised Human Body Part Parsing via Pose-Guided Knowledge Transfer <Br>
