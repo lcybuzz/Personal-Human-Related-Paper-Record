@@ -18,7 +18,8 @@
   - ★★ <Br>
   **[PGN]** <Br>
   - ★ <Br>
-  **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**, **[auto-zoom]**  <Br>
+  **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**, **[auto-zoom]**,
+  **[SSL]**  <Br>
  - Human Pose Estimation <Br>
   - ★★★ <Br>
   - ★★ <Br>
@@ -100,12 +101,14 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 4) 关于如何利用不同类别在空间和语义上的内在关系, 本篇paper很值得借鉴. <Br>
 
 
-### SSL 
+### SSL ★ 
 **[Paper]** Look into Person: Self-supervised Structure-sensitive Learning and A New Benchmark for Human Parsing <Br>
 **[Year]** CVPR 2017 <Br>
 **[Author]** [Ke Gong](https://github.com/Engineering-Course), [Xiaodan Liang](http://www.cs.cmu.edu/afs/cs/user/xiaodan1/www/), [Xiaohui Shen](http://users.eecs.northwestern.edu/~xsh835/), [Jianchao Yang](http://www.ifp.illinois.edu/~jyang29/), Jinhui Tang, [Liang Lin](http://www.linliang.net/)<Br>
 **[Pages]** https://github.com/Engineering-Course/LIP_SSL <Br>
 **[Description]** <Br>
+ 1) 提出LIP单人解析数据集. <br>
+ 2) 提出用解析的结果融合取平均得到关节点, 通过计算预测与真值关节点的欧式距离作为joint loss, 用以提供人体的结构信息. 实验显示, 这一措施虽然简单但能明显的提高性能, 说明了结构信息对人体解析任务的重要性. <Br>
 
 ### WSHP ★ 
 **[Paper]** Weakly and Semi Supervised Human Body Part Parsing via Pose-Guided Knowledge Transfer <Br>
