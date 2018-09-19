@@ -137,7 +137,7 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 3) 问题: 1. 从实验结果看, feature adaptation和label adaptation的有效性并不能得到很好的证明; 2. label adaptation似乎与cross-domain之间没什么必然的联系, 况且真实图像中人的姿态并不都是单一直立姿态的. <Br>
 
 ### **PGN ★★**
-**[Paper]**  MaskLab: Instance Segmentation by Refining Object Detection with Semantic and Direction Features  <Br>
+**[Paper]** Instance-level Human Parsing via Part Grouping Network  <Br>
 **[Year]** ECCV 2018 Oral <Br>
 **[Authors]** [Ke Gong](https://github.com/Engineering-Course), [Xiaodan Liang](http://www.cs.cmu.edu/afs/cs/user/xiaodan1/www/), [Yicheng Li](https://github.com/yicheng-li), [Yimin Chen](https://scholar.google.com/citations?user=rpLGwAQAAAAJ&hl=en), [Ming Yang](https://github.com/ufoym), [Liang Lin](http://www.linliang.net/)<Br>
 **[Pages]** https://github.com/Engineering-Course/CIHP_PGN<Br>
