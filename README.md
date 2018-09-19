@@ -19,7 +19,7 @@
   **[PGN]** <Br>
   - ★ <Br>
   **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**, **[auto-zoom]**,
-  **[SSL]**  <Br>
+  **[SSL]**, **[Pose-Guided]**  <Br>
  - Human Pose Estimation <Br>
   - ★★★ <Br>
   - ★★ <Br>
@@ -60,15 +60,6 @@
   5) 不足：I.分割性能很大程度上依赖于keypoint, 但对于多人keypoint检测只用一hourglass网络, 效果有限; II. Affine Align只包括平移, 缩放, 旋转, 实际效果是只能把倾斜角度很大的人体一定程度上修正到正常角度. 而且加入了最优化投影矩阵这一步骤, 使流程变得更复杂 <Br>
 
 # Human Parsing
-
-### *Deep Learning for Semantic Part Segmentation with High-Level Guidance* ★
-**[Paper]** Deep Learning for Semantic Part Segmentation with High-Level Guidance <Br>
-**[Year]** ICLR 2016 <Br>
-**[Author]** [Stavros Tsogkas](http://tsogkas.github.io/),[Iasonas Kokkinos](http://www0.cs.ucl.ac.uk/staff/I.Kokkinos/), [George Papandreou](http://ttic.uchicago.edu/~gpapan/), [Andrea Vedaldi](http://www.robots.ox.ac.uk/~vedaldi/) <Br>
-**[Pages]** <Br>
-**[Description]** <Br>
-1) 不太懂, 涉及到RBM <Br>
-  
 ### Co-CNN ★ 
 **[Paper]** Human Parsing with Contextualized Convolutional Neural Network <Br>
 **[Year]** ICCV 2015 Oral <Br>
@@ -78,6 +69,22 @@
   1) 采用类似U-Net的encoder-decoder结构, decoder阶段结合原图和encoder阶段的信息. <Br>
   2) 在最小的feature map后接一多类分类分支. 分类一支的loss参与全局梯度更新, 另外每个类别的概率与decoder中的每层feature map concat起来, 作为global image-level context <Br>
   3) 最后使用基于超像素的within-super-pixel smoothing和cross-super-pixel neighborhood voting <Br>
+
+### Pose-Guided ★ 
+**[Paper]** Pose-Guided Human Parsing by an AND/OR Graph Using Pose-Context Features <Br>
+**[Year]** AAAI 2016<Br>
+**[Author]** [Fangting Xia](https://sukixia.github.io), Jun Zhu, [Peng Wang](http://jerryking234.wixsite.com/pengwang), [Alan L. Yuille](http://www.cs.jhu.edu/~ayuille/) <Br>
+**[Pages]**   <Br>
+**[Description]** <Br>
+1) 大致浏览. 提出一个传统方法与深度学习相结合的人体解析方法. 首先结合关节点信息提取body part proposal. 然后用一些传统特征, FCN特征及pose特征表示每个proposal,训练一分类器对proposal进行ranking. 最后用And-Or Graph将proposal进行ensemble. <Br>
+
+### *Deep Learning for Semantic Part Segmentation with High-Level Guidance* ★
+**[Paper]** Deep Learning for Semantic Part Segmentation with High-Level Guidance <Br>
+**[Year]** ICLR 2016 <Br>
+**[Author]** [Stavros Tsogkas](http://tsogkas.github.io/),[Iasonas Kokkinos](http://www0.cs.ucl.ac.uk/staff/I.Kokkinos/), [George Papandreou](http://ttic.uchicago.edu/~gpapan/), [Andrea Vedaldi](http://www.robots.ox.ac.uk/~vedaldi/) <Br>
+**[Pages]** <Br>
+**[Description]** <Br>
+1) 不太懂, 涉及到RBM <Br>
 
 ### auto-zoom ★ 
 **[Paper]** Zoom better to see clearer: Human and object parsing with hierarchical auto-zoom net<Br>
