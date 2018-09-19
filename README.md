@@ -85,6 +85,13 @@
 **[Pages]** <Br>
 **[Description]** <Br>
 1) 不太懂, 涉及到RBM <Br>
+  
+### A-AOG
+**[Paper]** Attribute and-or grammar for joint parsing of human pose, parts and attributes <Br>
+**[Year]** NIPS 2018 / arXiv 1605 <Br>
+**[Author]** Seyoung Park, [Bruce Xiaohan Nie](http://www.stat.ucla.edu/~xiaohan.nie/), [Song-Chun Zhu](http://www.stat.ucla.edu/~sczhu/) <Br>
+**[Pages]** <Br>
+**[Description]** <Br>
 
 ### auto-zoom ★ 
 **[Paper]** Zoom better to see clearer: Human and object parsing with hierarchical auto-zoom net<Br>
