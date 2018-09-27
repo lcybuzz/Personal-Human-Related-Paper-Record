@@ -16,7 +16,7 @@
 - Human Parsing <Br>
   - ★★★ <Br>
   - ★★ <Br>
-  **[PGN]** <Br>
+  **[PGN]** **[CE2P]** <Br>
   - ★ <Br>
   **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**, **[auto-zoom]**,
   **[SSL]**, **[Pose-Guided]**  <Br>
@@ -163,6 +163,16 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
  1) 提出用Micro和Macro GAN分别解决low-level局部不一致问题和high-level语义不一致问题 <Br>
  2) 解析网络用的是encoder-decoder结构, 在低分辨率特征图上拉出来一支计算Macro CE loss和GAN loss, 在高分辨率特征图上计算Micro CE loss和GAN loss. GAN部分分别使用了小的输入和分辨率和小的感受野, 因此很容易收敛.从paper展示的效果上看, 有一定效果 <Br>
  3) 疑问: 文中提到的low-level inconsistency error指像孔洞这样的错误, 这种问题为什么可以靠相邻像素解决？个人感觉如果感受野足够大，这种孔洞应该可以被解决.
+
+### **CE2P ★★**
+**[Paper]**  Devil in the Details: Towards Accurate Single and Multiple Human Parsing  <Br>
+**[Year]** arXiv 1809 <Br>
+**[Authors]** Ting Liu, Tao Ruan, Zilong Huang, [Yunchao Wei](https://weiyc.github.io/), Shikui Wei, [Yao Zhao](https://scholar.google.com/citations?user=474TbQYAAAAJ&hl=zh-CN), [Thomas Huang](http://ifp-uiuc.github.io/)<Br>
+**[Pages]** https://github.com/liutinglt/CE2P <Br>
+**[Description]**<Br>
+1) 单人及多人解析框架, 在LIP, MHP及CHIP上都取得了不错的效果. 思路和细节都值得借鉴.<Br>
+2) 单人解析CE2P: 使用PSP pooling, 高分辨率特征融合, 边界理解三个模块.<Br>
+3) 多人解析M-CE2P: 使用Mask RCNN获得每个人的mask, 用来从不分实例的全局解析结果中得到每个人的解析结果. 另外, 在训练时还使用Mask RCNN及Instance的真值将每个人crop出来扩充训练样本. 最后, 针对Mask RCNN常把一部分目标分成背景的现象, 使用BFS处理多出来的部分. <Br>
 
 # Human Pose Estimation
 
