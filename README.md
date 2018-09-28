@@ -13,13 +13,15 @@
   **[Pose2Seg]** <Br>
   - ★ <Br>
   **[PortraitFCN]**, **[BSN]** <Br>
+  
 - Human Parsing <Br>
   - ★★★ <Br>
   - ★★ <Br>
   **[PGN]** **[CE2P]** <Br>
   - ★ <Br>
   **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**, **[auto-zoom]**,
-  **[SSL]**, **[Pose-Guided]**  <Br>
+  **[SSL]**, **[Pose-Guided]**, **[Holistic, Instance-level]**  <Br>
+  
  - Human Pose Estimation <Br>
   - ★★★ <Br>
   - ★★ <Br>
@@ -123,6 +125,15 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 **[Description]** <Br>
  1) 提出LIP单人解析数据集. <br>
  2) 提出用解析的结果融合取平均得到关节点, 通过计算预测与真值关节点的欧式距离作为joint loss, 用以提供人体的结构信息. 实验显示, 这一措施虽然简单但能明显的提高性能, 说明了结构信息对人体解析任务的重要性. <Br>
+
+### *Holistic, Instance-level* ★ 
+**[Paper]** Holistic, Instance-level Human Parsing <Br>
+**[Year]** BMVC 2017 <Br>
+**[Author]** [Qizhu Li](https://qizhuli.github.io/), [Anurag Arnab](http://www.robots.ox.ac.uk/~aarnab/), [Philip H.S. Torr](http://www.robots.ox.ac.uk/~phst/)<Br>
+**[Pages]**  <Br>
+**[Description]** <Br>
+1) 提出了一种Instance的人体解析方法. <Br>
+2) 首先检测出每个人的bounding box, 再用一三尺度的FCN得到全图的不分instance的解析结果,最后用一CRF得到分instance的解析结果. <Br>
 
 ### WSHP ★ 
 **[Paper]** Weakly and Semi Supervised Human Body Part Parsing via Pose-Guided Knowledge Transfer <Br>
