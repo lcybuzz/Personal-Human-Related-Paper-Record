@@ -20,7 +20,7 @@
   **[PGN]** **[CE2P]** <Br>
   - ★ <Br>
   **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**, **[auto-zoom]**,
-  **[SSL]**, **[Pose-Guided]**, **[Holistic, Instance-level]**  <Br>
+  **[SSL]**, **[Pose-Guided]**, **[Holistic, Instance-level]**, **[MuLA]**  <Br>
   
  - Human Pose Estimation <Br>
   - ★★★ <Br>
@@ -185,6 +185,18 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 2) 单人解析CE2P: 使用PSP pooling, 高分辨率特征融合, 边界理解三个模块.<Br>
 3) 多人解析M-CE2P: 使用Mask RCNN获得每个人的mask, 用来从不分实例的全局解析结果中得到每个人的解析结果. 另外, 在训练时还使用Mask RCNN及Instance的真值将每个人crop出来扩充训练样本. 最后, 针对Mask RCNN常把一部分目标分成背景的现象, 使用BFS处理多出来的部分. <Br>
 
+### **MuLA ★☆**
+**[Paper]**  Mutual Learning to Adapt for Joint Human Parsing and Pose Estimation  <Br>
+**[Year]** ECCV 2018 <Br>
+**[Authors]** [Xuecheng Nie](https://niexc.github.io/), [Jiashi Feng](https://sites.google.com/site/jshfeng/), [Shuicheng Yan](https://www.ece.nus.edu.sg/stfpage/eleyans/)<Br>
+**[Pages]** https://github.com/NieXC/pytorch-mula <Br>
+**[Description]**<Br>
+1) 提出了一种共同进行人体解析和关节点预测的方案, 利用对方的信息提高本任务的性能. <Br>
+2) 模型分为人体解析和关节点预测两支, 设计了一个mutual adaptation module, 相互利用对方的信息. <Br>
+3) 整个框架比较简单, 但是公式搞得很多... 相互refine的思路值得借鉴. <Br>
+
+
+  
 # Human Pose Estimation
 
 
