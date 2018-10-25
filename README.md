@@ -184,6 +184,14 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 1) 单人及多人解析框架, 在LIP, MHP及CHIP上都取得了不错的效果. 思路和细节都值得借鉴.<Br>
 2) 单人解析CE2P: 使用PSP pooling, 高分辨率特征融合, 边界理解三个模块.<Br>
 3) 多人解析M-CE2P: 使用Mask RCNN获得每个人的mask, 用来从不分实例的全局解析结果中得到每个人的解析结果. 另外, 在训练时还使用Mask RCNN及Instance的真值将每个人crop出来扩充训练样本. 最后, 针对Mask RCNN常把一部分目标分成背景的现象, 使用BFS处理多出来的部分. <Br>
+  
+### **NAN ★**
+**[Paper]**  Understanding Humans in Crowded Scenes: Deep Nested Adversarial Learning and A New Benchmark for Multi-Human Parsing  <Br>
+**[Year]** arXiv 1804 <Br>
+**[Authors]** [Jian Zhao](https://zhaoj9014.github.io/), Jianshu Li, Yu Cheng, Li Zhou, Terence Sim, [Shuicheng Yan](http://www.lv-nus.org/), [Jiashi Feng](https://sites.google.com/site/jshfeng/)<Br>
+**[Pages]** https://github.com/ZhaoJ9014/Multi-Human-Parsing_MHP <Br>
+**[Description]**<Br>  
+1) 粗读, 主要贡献是提出了MHP数据集. 另外提出了一个多级的生成对抗网络, 逐级处理显著区域检测, semantic segmentation和区分实例的聚类三个子任务. <Br>
 
 ### **MuLA ★☆**
 **[Paper]**  Mutual Learning to Adapt for Joint Human Parsing and Pose Estimation  <Br>
