@@ -25,6 +25,7 @@
  - Human Pose Estimation <Br>
   - ★★★ <Br>
   - ★★ <Br>
+  **[CPM]**
   - ★ <Br>
  
 # Human Segmentation
@@ -206,7 +207,14 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 
   
 # Human Pose Estimation
-
+### **CPM ★★**
+**[Paper]** Convolutional Pose Machines  <Br>
+**[Year]** CVPR 2016 <Br>
+**[Authors]** [Shih-En Wei](https://scholar.google.com/citations?user=sFQD3k4AAAAJ&hl=en&oi=ao), [Varun Ramakrishna](http://www.cs.cmu.edu/~vramakri/), [Takeo Kanade](https://www.ri.cmu.edu/ri-faculty/takeo-kanade/), [Yaser Sheikh](http://www.cs.cmu.edu/~yaser/)<Br>
+**[Pages]** https://github.com/shihenw/convolutional-pose-machines-release <Br>
+**[Description]**<Br>
+ 1) 提出一个多阶段预测人体关键点heatmap的方案, 每个阶段的感受野逐步加大, 实现利用从局部到全局信息的预测, 并在后一阶段中利用前一阶段的预测结果. 使用intermediate supervision解决梯度消失问题. <Br>
+ 2) **疑问**: 根据论文中所说, stage 2后感受野范围就已经大于输入尺寸了, 但最后还是堆叠了总共6个stage, 这个做是不是只是根据实验结果设置的, 理论根据是什么? <Br>
 
 # Datasets
 ## Human parsing
