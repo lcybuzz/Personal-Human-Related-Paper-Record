@@ -215,6 +215,39 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 **[Description]**<Br>
  1) 提出一个多阶段预测人体关键点heatmap的方案, 每个阶段的感受野逐步加大, 实现利用从局部到全局信息的预测, 并在后一阶段中利用前一阶段的预测结果. 使用intermediate supervision解决梯度消失问题. <Br>
  2) **疑问**: 根据论文中所说, stage 2后感受野范围就已经大于输入尺寸了, 但最后还是堆叠了总共6个stage, 这个做是不是只是根据实验结果设置的, 理论根据是什么? <Br>
+  
+### ***Stacked Hourglass Networks for Human Pose Estimation***
+**[Paper]** Stacked Hourglass Networks for Human Pose Estimation  <Br>
+**[Year]** CVPR 2016 <Br>
+**[Authors]** [Alejandro Newell](http://www-personal.umich.edu/~alnewell/), Kaiyu Yang, [Jia Deng]<Br>
+**[Pages]** <Br>
+  http://www-personal.umich.edu/~alnewell/pose/ <Br>
+  https://github.com/princeton-vl/pose-hg-train <Br>
+  https://github.com/wbenbihi/hourglasstensorlfow <Br>
+**[Description]**<Br>  
+  
+### ***Structured Feature Learning for Pose Estimation***
+**[Paper]** Structured Feature Learning for Pose Estimation <Br>
+**[Year]** CVPR 2016 <Br>
+**[Authors]** [Xiao Chu](https://scholar.google.com/citations?user=R-VLSLQAAAAJ&hl=zh-CN&oi=sra), [Wanli Ouyang](http://www.ee.cuhk.edu.hk/~wlouyang/）, [Hongsheng Li](http://www.ee.cuhk.edu.hk/~hsli/), [Xiaogang Wang](http://www.ee.cuhk.edu.hk/~xgwang/)<Br>
+**[Pages]** <Br>
+  http://www.ee.cuhk.edu.hk/~xgwang/projectpage_structured_feature_pose.html<Br>
+  https://github.com/chuxiaoselena/StructuredFeature <Br>
+**[Description]**<Br>  
+  
+### ***Human pose estimation via Convolutional Part Heatmap Regression***
+**[Paper]** Human pose estimation via Convolutional Part Heatmap Regression <Br>
+**[Year]** ECCV 2016 <Br>
+**[Authors]** [Adrian Bulat](https://www.adrianbulat.com/), [Georgios Tzimiropoulos](http://www.cs.nott.ac.uk/~pszyt/)<Br>
+**[Pages]** https://www.adrianbulat.com/human-pose-estimation<Br>
+**[Description]**<Br>  
+  
+### ***Integral Human Pose Regression***
+**[Paper]** Integral Human Pose Regression<Br>
+**[Year]** ECCV 2018 <Br>
+**[Authors]** [Xiao Sun](https://jimmysuen.github.io/), [Bin Xiao](https://github.com/leoxiaobin), [Fangyin Wei](https://weify627.github.io/), Yichen Wei<Br>
+**[Pages]** https://github.com/JimmySuen/integral-human-pose<Br>
+**[Description]**<Br> 
 
 # Datasets
 ## Human parsing
