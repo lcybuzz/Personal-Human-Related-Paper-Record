@@ -128,7 +128,7 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
  2) 提出用解析的结果融合取平均得到关节点, 通过计算预测与真值关节点的欧式距离作为joint loss, 用以提供人体的结构信息. 实验显示, 这一措施虽然简单但能明显的提高性能, 说明了结构信息对人体解析任务的重要性. <Br>
 
 ### SS-NAN ★☆
-**[Paper]**Self-Supervised Neural Aggregation Networks for Human Parsing <Br>
+**[Paper]** Self-Supervised Neural Aggregation Networks for Human Parsing <Br>
 **[Year]** CVPR 2017 <Br>
 **[Author]** [Jian Zhao](https://zhaoj9014.github.io/), Jianshu Li, [Xuecheng Nie](https://niexc.github.io/), Fang Zhao, Yunpeng Chen, Zhecan Wang, [Jiashi Feng](https://sites.google.com/site/jshfeng/), [Shuicheng Yan](http://www.lv-nus.org/) <Br>
 **[Pages]** https://github.com/llltttppp/SS-NAN <Br>
