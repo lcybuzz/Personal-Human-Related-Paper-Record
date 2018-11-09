@@ -20,7 +20,7 @@
   **[PGN]** **[CE2P]** <Br>
   - ★ <Br>
   **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**, **[auto-zoom]**,
-  **[SSL]**, **[Pose-Guided]**, **[Holistic, Instance-level]**, **[MuLA]**  <Br>
+  **[SSL]**, **[Pose-Guided]**, **[Holistic, Instance-level]**, **[MuLA]**, **[SS-NAN]**  <Br>
   
  - Human Pose Estimation <Br>
   - ★★★ <Br>
@@ -126,6 +126,15 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 **[Description]** <Br>
  1) 提出LIP单人解析数据集. <br>
  2) 提出用解析的结果融合取平均得到关节点, 通过计算预测与真值关节点的欧式距离作为joint loss, 用以提供人体的结构信息. 实验显示, 这一措施虽然简单但能明显的提高性能, 说明了结构信息对人体解析任务的重要性. <Br>
+
+### SS-NAN ★☆
+**[Paper]**Self-Supervised Neural Aggregation Networks for Human Parsing <Br>
+**[Year]** CVPR 2017 <Br>
+**[Author]** [Jian Zhao](https://zhaoj9014.github.io/), Jianshu Li, [Xuecheng Nie](https://niexc.github.io/), Fang Zhao, Yunpeng Chen, Zhecan Wang, [Jiashi Feng](https://sites.google.com/site/jshfeng/), [Shuicheng Yan](http://www.lv-nus.org/) <Br>
+**[Pages]** https://github.com/llltttppp/SS-NAN <Br>
+**[Description]** <Br>
+1) 提出了一种自适应地融合多尺度特征的方案. <Br>
+2) 具体来说, 就是对于1.0, 0.75, 0.5三个尺度的图像经过共享的卷积层及skip-connection处理后得到多尺度特征, 再将多尺度特征concat起来从国两个卷积层学习每个尺度的weight, 最后用得到的weight对三个尺度进行加权求和. 另外使用了SSL中提出的自监督的关节点回归loss, 加强结果的结构一致性. <Br>
 
 ### *Holistic, Instance-level* ★ 
 **[Paper]** Holistic, Instance-level Human Parsing <Br>
