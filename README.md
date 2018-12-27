@@ -25,8 +25,9 @@
  - Human Pose Estimation <Br>
   - ★★★ <Br>
   - ★★ <Br>
-  **[CPM]**
+  **[CPM]**, **[Stacked Hourglass]** <Br>
   - ★ <Br>
+
  
 # Human Segmentation
 ### PortraitFCN ★ 
@@ -225,7 +226,7 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
  1) 提出一个多阶段预测人体关键点heatmap的方案, 每个阶段的感受野逐步加大, 实现利用从局部到全局信息的预测, 并在后一阶段中利用前一阶段的预测结果. 使用intermediate supervision解决梯度消失问题. <Br>
  2) **疑问**: 根据论文中所说, stage 2后感受野范围就已经大于输入尺寸了, 但最后还是堆叠了总共6个stage, 这个做是不是只是根据实验结果设置的, 理论根据是什么? <Br>
   
-### ***Stacked Hourglass Networks for Human Pose Estimation***
+### **Stacked Hourglass ★★**
 **[Paper]** Stacked Hourglass Networks for Human Pose Estimation  <Br>
 **[Year]** CVPR 2016 <Br>
 **[Authors]** [Alejandro Newell](http://www-personal.umich.edu/~alnewell/), Kaiyu Yang, [Jia Deng]<Br>
@@ -234,6 +235,8 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
   https://github.com/princeton-vl/pose-hg-train <Br>
   https://github.com/wbenbihi/hourglasstensorlfow <Br>
 **[Description]**<Br>  
+ 1) CNN用于关节点检测的经典方法之一. 采用多级hourglass网络, 逐层下采样再上采样, 提取各尺度特征, 得到各关节点的heatmap. <Br>
+
   
 ### ***Structured Feature Learning for Pose Estimation***
 **[Paper]** Structured Feature Learning for Pose Estimation <Br>
