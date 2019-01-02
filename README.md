@@ -188,7 +188,7 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 
 ### **CE2P ★★**
 **[Paper]**  Devil in the Details: Towards Accurate Single and Multiple Human Parsing  <Br>
-**[Year]** arXiv 1809 <Br>
+**[Year]** AAAI 2019 <Br>
 **[Authors]** Ting Liu, Tao Ruan, Zilong Huang, [Yunchao Wei](https://weiyc.github.io/), Shikui Wei, [Yao Zhao](https://scholar.google.com/citations?user=474TbQYAAAAJ&hl=zh-CN), [Thomas Huang](http://ifp-uiuc.github.io/)<Br>
 **[Pages]** https://github.com/liutinglt/CE2P <Br>
 **[Description]**<Br>
