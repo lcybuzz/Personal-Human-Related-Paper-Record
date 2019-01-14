@@ -25,7 +25,7 @@
  - Human Pose Estimation <Br>
   - ★★★ <Br>
   - ★★ <Br>
-  **[CPM]**, **[Stacked Hourglass]** <Br>
+  **[CPM]**, **[Stacked Hourglass]**, **[structured feature learning]** <Br>
   - ★ <Br>
 
  
@@ -238,7 +238,7 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
  1) CNN用于关节点检测的经典方法之一. 采用多级hourglass网络, 逐层下采样再上采样, 提取各尺度特征, 得到各关节点的heatmap. <Br>
 
   
-### ***Structured Feature Learning for Pose Estimation***
+### **Structured Feature Learning ★★**
 **[Paper]** Structured Feature Learning for Pose Estimation <Br>
 **[Year]** CVPR 2016 <Br>
 **[Authors]** [Xiao Chu](https://scholar.google.com/citations?user=R-VLSLQAAAAJ&hl=zh-CN&oi=sra), [Wanli Ouyang](http://www.ee.cuhk.edu.hk/~wlouyang/）, [Hongsheng Li](http://www.ee.cuhk.edu.hk/~hsli/), [Xiaogang Wang](http://www.ee.cuhk.edu.hk/~xgwang/)<Br>
@@ -246,6 +246,10 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
   http://www.ee.cuhk.edu.hk/~xgwang/projectpage_structured_feature_pose.html<Br>
   https://github.com/chuxiaoselena/StructuredFeature <Br>
 **[Description]**<Br>  
+1) 提出一种挖掘不同关节点feature map关联信息的方法, 通过"geometrical transform kernel"和"bi-directional tree"对关节点间的联系建模.<Br>
+2) 所谓geometrical transform kernel, 即几个普通的卷积层, 输入和输出为由树结构定义的上一层和下一层次的特征. 作者认为这种卷积可以对feature做空间上的修正, 把一个关节点的特征图shift到相邻关节点的位置上去, 不过个人感觉人体是非刚体, 所以这种空间位置偏移的建模不太有说服力. <Br>
+3) bi-directional tree是对相邻关节点消息传递方向的双向树结构. 一个方向自下而上, 叶节点(例如wrist)的信息逐层向上经elbow和shoulder传递到head; 一个方向自上而下, 从head传播到wrist. 作者认为, 这种结构加上stacked transform kernel, 可以引入多尺度信息. <Br>
+4) 文中挖掘关节点间联系的思路值得借鉴. <Br>
   
 ### ***Human pose estimation via Convolutional Part Heatmap Regression***
 **[Paper]** Human pose estimation via Convolutional Part Heatmap Regression <Br>
@@ -253,7 +257,7 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 **[Authors]** [Adrian Bulat](https://www.adrianbulat.com/), [Georgios Tzimiropoulos](http://www.cs.nott.ac.uk/~pszyt/)<Br>
 **[Pages]** https://www.adrianbulat.com/human-pose-estimation<Br>
 **[Description]**<Br>  
-  
+   
 ### ***Integral Human Pose Regression***
 **[Paper]** Integral Human Pose Regression<Br>
 **[Year]** ECCV 2018 <Br>
