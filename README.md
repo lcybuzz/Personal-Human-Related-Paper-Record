@@ -53,9 +53,11 @@
 
 ### Pose2Seg ★★
 **[Paper]** Pose2Seg: Human Instance Segmentation Without Detection <Br>
-**[Year]** arXiv 1803 <Br>
+**[Year]** CVPR 2019 <Br>
 **[Author]** [Ruilong Li](http://www.liruilong.cn/), Xin Dong, Zixi Cai, Dingcheng Yang, Haozhi Huang, Song-Hai Zhang, [Paul L. Rosin](http://users.cs.cf.ac.uk/Paul.Rosin/), Shi-Min Hu <Br>
 **[Pages]** <Br>
+  https://github.com/liruilong940607/Pose2Seg <Br>
+  https://github.com/liruilong940607/OCHumanApi <Br>
 **[Description]** <Br>
   1) 结合pose做human instance segmentation, 与mask r-cnn相比对overlap的目标效果更好. 包括人体keypoint检测, Affine Align, 对每个align后的人分割三部分. <Br>
   2) keypoint检测部分使用hourglass结构, 得到每个人的keypoint; <Br>
