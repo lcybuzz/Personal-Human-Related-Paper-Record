@@ -20,7 +20,7 @@
   **[PGN]** **[CE2P]** <Br>
   - ★ <Br>
   **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**, **[auto-zoom]**,
-  **[SSL]**, **[Pose-Guided]**, **[Holistic, Instance-level]**, **[MuLA]**, **[SS-NAN]**  <Br>
+  **[SSL]**, **[Pose-Guided]**, **[Holistic, Instance-level]**, **[MuLA]**, **[SS-NAN]**, **[Graphonomy]**  <Br>
   
  - Human Pose Estimation <Br>
   - ★★★ <Br>
@@ -216,7 +216,15 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 2) 模型分为人体解析和关节点预测两支, 设计了一个mutual adaptation module, 相互利用对方的信息. <Br>
 3) 整个框架比较简单, 但是公式搞得很多... 相互refine的思路值得借鉴. <Br>
 
-
+### **Graphonomy ★**
+**[Paper]**  Graphonomy: Universal Human Parsing via Graph Transfer Learning  <Br>
+**[Year]** CVPR 2019 <Br>
+**[Authors]** [Ke Gong](https://kegong.top/), Yiming Gao, [Xiaodan Liang](https://lemondan.github.io/), [Xiaohui Shen](http://users.eecs.northwestern.edu/~xsh835/), Meng Wang, [Liang Lin](http://www.linliang.net/)<Br>
+**[Pages]** https://github.com/Gaoyiminggithub/Graphonomy <Br>
+**[Description]**<Br>
+1) 粗读, 提出一种通过图神经网络挖掘parts间信息, 在不同数据集间迁移学习的人体解析方法.<Br>
+2) 针对Pascal Person Part, ATR和CIHP三个数据集, 利用matmul操作分别定义了3支GCN结构, 并定义了一些相互作用的矩阵. 输入为一般CNN的输出feature, 经Graph处理后再变换为同CNN匹配的feature.<Br>
+3) 效果弱于CE2P. <Br>
   
 # Human Pose Estimation
 ### **CPM ★★**
