@@ -20,7 +20,7 @@
   **[PGN]** **[CE2P]** <Br>
   - ★ <Br>
   **[High-Level Guidance]**, **[Co-CNN]**, **[PFCN]**, **[WSHP]**, **[Cross-domain Adversarial]**, **[MMAN]**, **[auto-zoom]**,
-  **[SSL]**, **[Pose-Guided]**, **[Holistic, Instance-level]**, **[MuLA]**, **[SS-NAN]**, **[Graphonomy]**  <Br>
+  **[SSL]**, **[Pose-Guided]**, **[Holistic, Instance-level]**, **[MuLA]**, **[SS-NAN]**, **[Graphonomy]** , **[Parsing R-CNN]** <Br>
   
  - Human Pose Estimation <Br>
   - ★★★ <Br>
@@ -200,7 +200,7 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
   
 ### **NAN ★**
 **[Paper]**  Understanding Humans in Crowded Scenes: Deep Nested Adversarial Learning and A New Benchmark for Multi-Human Parsing  <Br>
-**[Year]** arXiv 1804 <Br>
+**[Year]** MM 18 <Br>
 **[Authors]** [Jian Zhao](https://zhaoj9014.github.io/), Jianshu Li, Yu Cheng, Li Zhou, Terence Sim, [Shuicheng Yan](http://www.lv-nus.org/), [Jiashi Feng](https://sites.google.com/site/jshfeng/)<Br>
 **[Pages]** https://github.com/ZhaoJ9014/Multi-Human-Parsing_MHP <Br>
 **[Description]**<Br>  
@@ -225,6 +225,16 @@ CRF, unary term从joint score map得到, pairwise term由neighbor score map和se
 1) 粗读, 提出一种通过图神经网络挖掘parts间信息, 在不同数据集间迁移学习的人体解析方法.<Br>
 2) 针对Pascal Person Part, ATR和CIHP三个数据集, 利用matmul操作分别定义了3支GCN结构, 并定义了一些相互作用的矩阵. 输入为一般CNN的输出feature, 经Graph处理后再变换为同CNN匹配的feature.<Br>
 3) 效果弱于CE2P. <Br>
+  
+### Parsing R-CNN ★
+**[Paper]**  Parsing R-CNN for Instance-Level Human Analysis  <Br>
+**[Year]** CVPR 2019 <Br>
+**[Authors]** Lu Yang, Qing Song, Zhihui Wang, Ming Jiang<Br>
+**[Pages]** https://github.com/soeaver/Parsing-R-CNN <Br>
+**[Description]**<Br>
+ 1) 基于Mask R-CNN做的人体解析, 加大模型复杂度, 提高了性能. 对于CVPR来说创新点好像略有不足, 但是能发表出来就是厉害的.<Br>
+ 2) 文章提出的改进都很简单: 只从FPN的大分辨率层取feature, 加大分割分支输入尺寸, 分割网络用更复杂的结构. <Br>
+ 3) 文中的方法之前都尝试过, 性能有一定程度的改善, 但还是不够精细.
   
 # Human Pose Estimation
 ### **CPM ★★**
